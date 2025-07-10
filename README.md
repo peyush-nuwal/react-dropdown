@@ -20,8 +20,8 @@ A lightweight React app to upload and filter CSV data using dropdowns. Built wit
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/react-csv-filter-dashboard.git
-cd react-csv-filter-dashboard
+git clone https://github.com/peyush-nuwal/react-dropdown.git
+cd react-dropdown
 ```
 
 ### 2. Install dependencies

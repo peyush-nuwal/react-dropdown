@@ -1,6 +1,6 @@
 import DataTable from "react-data-table-component";
 import { useCsvStore } from "../store/useCsvStore";
-import React, { useMemo } from "react";
+import  { useMemo } from "react";
 
 // ✅ Custom styles for the DataTable (tailored to a dark theme)
 const customStyles = {
