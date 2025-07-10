@@ -22,6 +22,7 @@ describe("DropDownContainer", () => {
 
   it("does not render when data is empty", () => {
     render(<DropDownContainer />);
+    // @ts-ignore
     expect(screen.queryByText(/Dropdown/i)).not.toBeInTheDocument();
   });
 
@@ -38,7 +39,9 @@ describe("DropDownContainer", () => {
 
     render(<DropDownContainer />);
 
+    // @ts-ignore
     expect(screen.getByText("name Dropdown")).toBeInTheDocument();
+    // @ts-ignore
     expect(screen.getByText("category Dropdown")).toBeInTheDocument();
   });
 
@@ -57,6 +60,7 @@ describe("DropDownContainer", () => {
     render(<DropDownContainer />);
 
     const clearBtn = screen.getByText(/Clear Filter/i);
+    // @ts-ignore
     expect(clearBtn).toBeInTheDocument();
 
     fireEvent.click(clearBtn);

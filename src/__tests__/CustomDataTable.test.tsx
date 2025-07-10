@@ -18,6 +18,7 @@ beforeEach(() => {
 describe("CustomDataTable", () => {
   it("renders with no data", () => {
     render(<CustomDataTable />);
+    // @ts-ignore
     expect(screen.getByRole("table")).toBeInTheDocument();
   });
 
@@ -37,8 +38,10 @@ describe("CustomDataTable", () => {
     render(<CustomDataTable />);
 
     // Nike should appear
+    // @ts-ignore
     expect(screen.getByText("Nike")).toBeInTheDocument();
     // Levi’s should not appear (filtered out)
+    // @ts-ignore
     expect(screen.queryByText("Levi’s")).not.toBeInTheDocument();
   });
 
@@ -55,8 +58,9 @@ describe("CustomDataTable", () => {
     });
 
     render(<CustomDataTable />);
-
+    // @ts-ignore
     expect(screen.getByText("Nike")).toBeInTheDocument();
+    // @ts-ignore
     expect(screen.getByText("Levi’s")).toBeInTheDocument();
   });
 });

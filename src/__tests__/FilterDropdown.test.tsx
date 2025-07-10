@@ -53,9 +53,13 @@ describe("FilterDropdown", () => {
 
     render(<FilterDropdown column="category" />);
 
+    // @ts-ignore
     expect(screen.getByText("category")).toBeInTheDocument();
+    // @ts-ignore
     expect(screen.getByTestId("mock-multiselect")).toBeInTheDocument();
+    // @ts-ignore
     expect(screen.getByText("Shoes")).toBeInTheDocument();
+    // @ts-ignore
     expect(screen.getByText("Clothing")).toBeInTheDocument();
   });
 

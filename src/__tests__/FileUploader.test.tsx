@@ -20,6 +20,7 @@ describe("FileUploader component", () => {
 
   it("renders upload prompt initially", () => {
     render(<FileUploader />);
+    // @ts-ignore
     expect(screen.getByText("Upload your file")).toBeInTheDocument();
   });
 
@@ -39,6 +40,7 @@ describe("FileUploader component", () => {
     fireEvent.change(input, { target: { files: [file] } });
 
     await waitFor(() => {
+      // @ts-ignore
       expect(screen.getByText("File Uploaded ✔️")).toBeInTheDocument();
     });
   });
@@ -57,6 +59,7 @@ describe("FileUploader component", () => {
     fireEvent.change(input, { target: { files: [file] } });
 
     await waitFor(() => {
+      // @ts-ignore
       expect(screen.getByText(/Failed to parse file/i)).toBeInTheDocument();
     });
   });
